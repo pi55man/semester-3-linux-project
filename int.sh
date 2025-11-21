@@ -25,7 +25,7 @@ fi
 
 if ! crontab -l 2>/dev/null | grep -q "int.sh $FILE"; then
     (crontab -l 2>/dev/null; \
-     echo "0 22 * * * $HOME/project/int.sh $FILE >> $HOME/integrity-report.log 2>&1") | crontab -
+     echo "0 22 * * * $HOME/semester-3-linux-project/int.sh $FILE >> $HOME/integrity-report.log 2>&1") | crontab -
     echo "[CRON] Daily check scheduled at 10:00 PM for $FILE"
     echo "       Report will be saved to $HOME/integrity-report.log"
 fi
